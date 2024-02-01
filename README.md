@@ -1,30 +1,30 @@
-> Any-Proxy可以帮助你完美地反向代理浏览任意网站  
-> 免去复杂的程序，不到10KB文件，兼容性极好  
+> Any-Proxy can help you browse any website with a perfect reverse proxy  
+> No need for complicated procedures, less than 10KB file, excellent compatibility
   
-> 添加了简易的密码访问，默认密码web  
-> 最新版本将退出指令改成了~q 这将在输入时更加便捷  
-> 需配置伪静态，nginx伪静态规则如下：  
+> Added easy password access, default password web  
+> The latest version changes the exit command to ~q, which will be more convenient when typing.  
+> Pseudo-static needs to be configured. The nginx pseudo-static rules are as follows:  
 > if ( !-e $request_filename) {  
->     rewrite ^/(.*)$ /index.php?$1 last;  
->     break;  
-> }  
+> rewrite ^/(.*)$ /index.php?$1 last;  
+> break;  
+> }
   
-> index.php 外链、外链图片、外链静态文件等请求不通过Any-Proxy，地址栏不会显示目标域名  
-> index_all.php 区别为传统版，地址栏会显示目标域名，性能不及前者  
-> index_all.php 所有外链、外链图片、外链静态文件等请求都通过Any-Proxy
+> index.php external links, external link pictures, external link static files and other requests do not go through Any-Proxy, and the target domain name will not be displayed in the address bar.  
+> index_all.php is different from the traditional version. The address bar will display the target domain name, and its performance is not as good as the former.  
+> index_all.php All requests for external links, external link pictures, external link static files, etc. go through Any-Proxy
   
-> 支持POST、Cookie，https/http均可使用  
-> 支持伪造IP，$anyip值为1发送服务器IP头，值为2则发送随机IP，值为3发送客户端IP  
-> 已解决中文乱码问题，自动转换  
+> Support POST, Cookie, https/http can be used  
+> Supports forged IP. If the $anyip value is 1, the server IP header will be sent. If the value is 2, a random IP will be sent. If the value is 3, the client IP will be sent.  
+> The problem of Chinese garbled characters has been solved and automatic conversion
   
-> 在当前链接末尾输入 ~q 可以退出当前页面回到首页  
-> 在域名后面加上链接地址即可访问：  
-> https://www.com/http://+需访问的链接 （目标链接必须添加http(s)://）  
+> Enter ~q at the end of the current link to exit the current page and return to the home page.  
+> Add the link address after the domain name to access:  
+> https://www.com/http://+the link to be accessed (the target link must add http(s)://)
   
-> 如 ：https://www.com/http://ip38.com/  
+> Such as: https://www.com/http://ip38.com/
   
 ![Image](https://p.pstatp.com/origin/fe81000376fc445be379)  
 ![Image](https://p.pstatp.com/origin/137b90001905c99862df3)  
 
-> 基于：https://github.com/koala0529/reverse-proxy-php 修改  
-> 请勿用于非法用途，否则后果自负。
+> Based on: https://github.com/koala0529/reverse-proxy-php modified  
+> Please do not use it for illegal purposes, otherwise you will be responsible for the consequences.
